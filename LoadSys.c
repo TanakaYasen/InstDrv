@@ -22,7 +22,8 @@ static void ReportError(HWND hwnd, TCHAR *upname) {
 		0,
 		NULL);
 	//TCharToOem(upname, upname);
-	SetWindowText(hwnd, upname);
+	_stprintf_s(errmsg, sizeof(errmsg), _T("%d(0x%x):%s\n"), dwLastError, dwLastError, upname);
+	SetWindowText(hwnd, errmsg);
 	LocalFree(upname);
 }
 
@@ -37,7 +38,7 @@ HWND hwndStatus = NULL ; //状态标识的窗口句柄
 int WINAPI WinMain (HINSTANCE hInstance, HINSTANCE hPrevInstance,
                     PSTR szCmdLine, int iCmdShow)
 {
-        if (-1 == DialogBox (hInstance, szAppName, NULL, DlgProc))
+        if (-1 == DialogBox (hInstance, szAppName, NULL, (INT_PTR (CALLBACK *)(HWND, UINT, WPARAM, LPARAM))DlgProc))
         {
                 MessageBox (NULL, TEXT ("This program requires Windows NT!"),
                         szAppName, MB_ICONERROR) ;

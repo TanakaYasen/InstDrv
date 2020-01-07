@@ -1,0 +1,110 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+/////////////////////////////////////////////////////////////////////////////
+// 中文(简体，中国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+LOADSYS DIALOGEX 0, 0, 209, 96
+STYLE DS_SETFONT | DS_MODALFRAME | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "LoadSys"
+FONT 10, "System", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "关闭(&C)",IDCANCEL,163,41,36,14
+    LTEXT           "驱动文件的完整路径",IDC_STATIC_1,7,7,73,8
+    EDITTEXT        IDC_EDIT_DRVFULLPATH,7,21,153,12,ES_AUTOHSCROLL | NOT WS_BORDER,WS_EX_CLIENTEDGE
+    PUSHBUTTON      "浏览(&R)...",IDC_BTN_BROWSE,163,20,36,14
+    LTEXT           "Status:",IDC_STATIC_2,7,59,27,8
+    PUSHBUTTON      "安装(&I)",IDC_BTN_INSTALL,7,41,36,14
+    PUSHBUTTON      "开始(&S)",IDC_BTN_START,46,41,36,14
+    PUSHBUTTON      "停止(&T)",IDC_BTN_STOP,85,41,36,14
+    PUSHBUTTON      "移除(&E)",IDC_BTN_REMOVE,124,41,36,14
+    LTEXT           "",IDC_STATIC_STATUS,7,67,192,27
+    CONTROL         "SCM",IDC_RADIO_SCM,"Button",BS_AUTORADIOBUTTON,115,5,35,10
+    CONTROL         "ZwLoad",IDC_RADIO_NATIVEAPI,"Button",BS_AUTORADIOBUTTON,153,5,35,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+LOADSYS                 ICON                    "InstDrv.ico"
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    "LOADSYS", DIALOG
+    BEGIN
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+LOADSYS AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+#endif    // 中文(简体，中国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

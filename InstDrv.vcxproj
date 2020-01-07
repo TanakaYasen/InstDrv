@@ -51,6 +51,7 @@
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>ntdll.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -66,6 +67,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <AdditionalDependencies>ntdll.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -75,13 +77,13 @@
     <Text Include="Readme.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="LoadSys.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="LoadSys.rc" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="InstDrv.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="InstDrv.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
